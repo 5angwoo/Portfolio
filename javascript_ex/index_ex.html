@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	thead{color:green;}
+	tbody{color:blue;}
+	table, th, td{border:1px solid black;}
+</style>
+<script type="text/javascript">
+var FIELD_CNT = 2;
+function add(event){
+	var idx=0;
+	var tbd = document.getElementById("tbd");
+	var tr = document.createElement("tr");
+	var td = Array(FIELD_CNT);
+	var fld = Array(FIELD_CNT);
+	
+	td[idx] = document.createElement("td");
+	fld[idx] = document.createElement("input");
+	fld[idx].style.width = "30px";
+	fld[idx].type="checkbox";
+	fld[idx].checked = false;
+	
+	idx++;
+	td[idx] = document.createElement("td");
+	fld[idx] = document.createElement("input");
+	fld[idx].style.width = "100px";
+	fld[idx].style.backgroundColor="yellow";
+	fld[idx].setAttribute("type","text");
+	
+	for(var i=0 ; i<fld.length ; i++){
+		td[i].appendChild(fld[i]);
+	}
+	for(var i=0 ; i<td.length ; i++){
+		tr.appendChild(td[i]);
+	}
+	
+	tbd.appendChild(tr);
+}
+function del(){
+	alert("not yet");
+}
+var printRow = function(){
+	alert("not yet");
+}
+</script>
+</head>
+<body>
+<button onclick="add()">추가</button>
+<button onclick="del">삭제</button>
+<button onclick="printRow">출력</button><br>
+<textarea rows="5" cols="40" id="txt"></textarea>
+<hr>
+<table>
+<thead>
+<tr>
+	<th>필드1</th>
+	<th>필드2</th>
+</tr>
+</thead>
+<tbody id="tbd"></tbody>
+</table>
+</body>
+</html>
