@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- 헤더 -->
+<style>
+body {
+	
+	background: url(Img/1.jpg);
+	background-size: cover;
+	background-position: center center;
+	width: device-width;
+	color: #8C8C8C;
+	text-align: center;
+}
+
+table {
+	margin-top:300px;
+	background: #FFE400;
+	text-align:center;
+}
+</style>
+
+<script>
+	function MM_openBrWindow(theURL, winName, features) {
+		form = document.join;
+		if (winName == "userid_check") {
+			if (!checkValue(form.userid, '아이디', 5, 16)) {
+				return;
+			}
+			theURL = theURL + "?userid=" + form.userid.value;
+			
+		}
+		window.open(theURL, winName, features);
+	}
+	
+	function checkValue(target,cmt,lmin,lmax){
+		var Alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var Digit = '1234657890';
+		var astr = Alpha+Digit;
+		var i;
+		var tValue = target.value;
+		if(tValue.length < lmin || tValue.length > lmax){
+			if(lmin==lmax) alert(cmt+'는' + lmin + 'byte이어야 합니다.');
+			else alert(cmt+'는' + lmin + '~' + lmax + 'Byte이내로 입력하셔야 합니다.');
+			target.focus();
+			return false;
+		}
+		if(astr.length>1){
+			for(i=0 ; i<tValue.length;i++){
+				if(astr.indexOf(tValue.subString(i,i+1))<0){
+					alert(cmt+'에 허용할 수 없는 문자가 입력 되었습니다.');
+					target.focus();
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+	<div>
+		<header>
+			<div id="main_header">
+				<h1 id="main_title">Cuckoo</h1> <span id="login_btn"
+					align="right"><a href="main.html">Login</a> </span>
+			</div>
+
+		</header>
+		<nav>
+
+			<a href="index.html">Home</a> <a href="/contact">Contact</a>
+
+		</nav>
+
+		<div>
+			<form method="post" action="insert.jsp">
+				<center>
+					<table>
+						<tr>
+							<td>이름</td>
+							<td><input type="text"name="username" size="30" required></td>
+						</tr>
+						<tr>
+							<td>아이디</td>
+							<td><input type="text" name="userid" size="30" required></td>
+							<td><input type="button" value="ID중복 확인"
+								onClick="MM_openBrWindow('userid_check.jsp','userid_check','width=330, height=200')"></td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td><input type="password" name="password" size="30"
+								required></td>
+						</tr>
+						<tr>
+							<td>비밀번호 확인</td>
+							<td><input type="password" name="password_1" size="30"
+								required></td>
+						</tr>
+						<tr>
+							<td>닉네임</td>
+							<td><input type="text" name="nickname" size="30" required></td>
+						</tr>
+						<tr>
+							<td>email</td>
+							<td><input type="email"	name="email" size="30" required></td>
+						</tr>
+						<tr>
+							<td>생년월일</td>
+							<td><input type="date" name="birthday" ></td>
+						</tr>
+						<tr>
+							<td>성별</td>
+							<td>남자<input type="radio"
+					name="sex" value="man"> 여자 <input type="radio" name="sex"
+					value="woman"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="회원 가입">
+				<input type="reset" value="다시 작성"></td>
+						
+					</table>
+				</center>
+
+				<span></span> <br> <br> <br><br> <br> <br> <br>  :   <br> 
+			</form>
+		</div>
+
+		<footer>
+			<p>&copy; Copyright by Cuckoo</p>
+		</footer>
+	</div>
+</body>
+</html>
