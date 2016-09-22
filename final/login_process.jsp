@@ -50,7 +50,7 @@
 	if(bLogin){
 		session.setAttribute("user_info_userid", userid);
 		session.setAttribute("user_info_password", password);
-		response.sendRedirect("login_success.jsp");
+		response.sendRedirect("freeboard_list.jsp");
 	}else{
 		out.println("<script>alert('아이디와 비밀번호를 확인하세요'); history.back();</script>");
 	}

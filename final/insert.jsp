@@ -40,7 +40,7 @@
 		pstmt.setString(4, password);
 		pstmt.setString(5, sex);
 		pstmt.setString(6, email);
-		pstmt.setTimestamp(7, regdate);//(7, regdate);		
+		pstmt.setString(7, regdate);//(7, regdate);		
 		pstmt.executeUpdate();		
 	}catch(SQLException e){
 		out.println("<script>alert('가입 처리도중 오류가 발생되었습니다. 관리자에게 문의 하세요.'); history.back();</script>");
