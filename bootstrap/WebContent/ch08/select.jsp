@@ -92,7 +92,7 @@
  </tr>
  <tr >
   <td colspan="2" align="center">
-   <input type="button" value="È®   ÀÎ" onClick="location='../index.html'">
+   <input type="button" value="È®   ÀÎ" onClick="location='right_Frame.htm'">
    <input type="button" value="¼ö   Á¤" onClick="location='modify_session.jsp?mode=modify'">
    <input type="button" value="È¸¿ø Å»Åð" onClick="location='delete.jsp'">
  </td>

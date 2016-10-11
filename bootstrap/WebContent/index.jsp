@@ -64,6 +64,7 @@
                     </li>
                     <li>
                     	<a href="ch08/indexLog.html">Login</a>
+                   	</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
