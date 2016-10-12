@@ -135,7 +135,7 @@ function doSubmit() {
  </tr>
  <tr >
   <td colspan="2" align="center">
-   <input type="button" value="확   인" onClick="location='../index.html'">
+   <input type="button" value="확   인" onClick="location='index.htm'">
    <input type="button" value="수   정" onClick="doSubmit()"></td>
  </tr>
 </table>
